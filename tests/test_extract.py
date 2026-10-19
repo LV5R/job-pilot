@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from jobpilot.extract import SkillsDict, extract_skills, load_skills
+from jobpilot.extract import SkillsDict, canonicalize, extract_skills, load_skills, mentions
 
 SKILLS: SkillsDict = {
     ".NET": ["dotnet"],
@@ -125,3 +125,25 @@ def test_load_skills_rejects_bad_content(tmp_path: Path, content: str) -> None:
 def test_load_skills_missing_file(tmp_path: Path) -> None:
     with pytest.raises(FileNotFoundError):
         load_skills(tmp_path / "missing.json")
+
+
+@pytest.mark.parametrize(
+    ("term", "text", "expected"),
+    [
+        ("Python", "Strong python skills", True),
+        ("C++", "We use C++ daily", True),
+        (".NET", "Built on .NET", True),
+        ("GitHub Actions", "GitHub\nActions", True),
+        ("Python", "Pythonic code", False),
+        ("Java", "JavaScript only", False),
+        ("Terraform", "Python and AWS", False),
+        ("  ", "anything", False),
+    ],
+)
+def test_mentions(term: str, text: str, expected: bool) -> None:
+    assert mentions(term, text) is expected
+
+
+def test_canonicalize_maps_synonyms_and_keeps_unknown() -> None:
+    names = ["amazon web services", "k8s", "PYTHON", "Terraform", "AWS"]
+    assert canonicalize(names, SKILLS) == ["AWS", "Kubernetes", "Python", "Terraform"]

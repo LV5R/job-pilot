@@ -38,12 +38,29 @@ def _term_pattern(term: str) -> str:
     return r"\s+".join(re.escape(word) for word in term.split())
 
 
-def _skill_regex(skill: str, synonyms: list[str]) -> re.Pattern[str]:
-    terms = sorted({skill, *synonyms}, key=len, reverse=True)
-    alternation = "|".join(_term_pattern(t) for t in terms)
+def _terms_regex(terms: list[str]) -> re.Pattern[str]:
+    alternation = "|".join(_term_pattern(t) for t in sorted(terms, key=len, reverse=True))
     # Lookarounds instead of \b: \b needs a word character on one side, so it
     # never matches after the "+" in "C++" or before the "." in ".NET".
     return re.compile(rf"(?<!\w)(?:{alternation})(?!\w)", re.IGNORECASE)
+
+
+def _skill_regex(skill: str, synonyms: list[str]) -> re.Pattern[str]:
+    return _terms_regex(list({skill, *synonyms}))
+
+
+def mentions(term: str, text: str) -> bool:
+    """True if term appears in text as a whole term, using the dictionary's matching rules."""
+    return bool(term.strip()) and _terms_regex([term]).search(text) is not None
+
+
+def canonicalize(names: list[str], skills: SkillsDict) -> list[str]:
+    """Map names to their dictionary skill (by name or synonym); keep unknown names as given."""
+    lookup = {
+        term.casefold(): skill for skill, synonyms in skills.items() for term in (skill, *synonyms)
+    }
+    result = {lookup.get(name.casefold(), name) for name in names}
+    return sorted(result, key=str.casefold)
 
 
 def extract_skills(text: str, skills: SkillsDict) -> list[str]:

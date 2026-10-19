@@ -1,3 +1,4 @@
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -62,3 +63,46 @@ def test_extract_requires_jd_argument() -> None:
 def test_no_subcommand_prints_help(capsys: pytest.CaptureFixture[str]) -> None:
     assert main([]) == 2
     assert "usage: jobpilot" in capsys.readouterr().out
+
+
+def test_extract_llm_compares_and_flags_hallucinations(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    jd = write_jd(tmp_path, "Python and Amazon Web Services required. Terraform is a plus.")
+    # LLM says "Amazon Web Services" (dictionary synonym -> AWS), finds Terraform
+    # (in text, not in dictionary) and invents Rust (not in text).
+    monkeypatch.setattr(
+        "jobpilot.main.llm_extract_skills",
+        lambda text: ["Amazon Web Services", "Python", "Rust", "Terraform"],
+    )
+    assert main(["extract", jd, "--llm"]) == 0
+    captured = capsys.readouterr()
+    assert captured.err == ""
+    assert captured.out == (
+        "Dictionary (2):\n"
+        "  AWS\n"
+        "  Python\n"
+        "LLM (4):\n"
+        "  AWS\n"
+        "  Python\n"
+        "  Rust\n"
+        "  Terraform\n"
+        "LLM-only (2):\n"
+        "  Rust  [not in JD text — possible hallucination]\n"
+        "  Terraform\n"
+    )
+
+
+def test_extract_llm_failure_falls_back_to_dictionary(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    jd = write_jd(tmp_path, "Python and Docker required.")
+    def timeout(*args: object, **kwargs: object) -> None:
+        raise subprocess.TimeoutExpired("claude", 60)
+
+    # Patch at the subprocess level so the real error-mapping in llm.py runs too.
+    monkeypatch.setattr("jobpilot.llm.subprocess.run", timeout)
+    assert main(["extract", jd, "--llm"]) == 0
+    captured = capsys.readouterr()
+    assert captured.out == "Docker\nPython\n"
+    assert "LLM extraction failed (timed out after 60s)" in captured.err
