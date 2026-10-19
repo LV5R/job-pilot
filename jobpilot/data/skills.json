@@ -1,11 +1,19 @@
 {
+  "Agile": ["scrum"],
+  "API": ["apis", "rest api", "rest apis", "restful"],
   "AWS": ["amazon web services"],
+  "Azure": ["microsoft azure"],
   "Bash": ["shell scripting"],
   "Burp Suite": ["burp", "burpsuite"],
   "C#": ["csharp", "c sharp"],
   "C++": ["cpp"],
   "CI/CD": ["cicd", "continuous integration", "continuous delivery", "continuous deployment"],
+  "Containers": ["containerization", "containerisation", "containerized", "containerised"],
+  "Cybersecurity": ["cyber security", "cyber-security", "information security", "infosec"],
+  "Data Structures & Algorithms": ["data structures", "algorithms", "dsa"],
+  "DevOps": [],
   "Docker": [],
+  "GCP": ["google cloud", "google cloud platform"],
   "Git": [],
   "GitHub Actions": [],
   "Java": [],
@@ -18,5 +26,6 @@
   "PyTest": ["py.test"],
   "Python": ["python3"],
   "Selenium": ["webdriver"],
+  "Software Testing": ["test automation", "quality engineering"],
   "SQL": []
 }

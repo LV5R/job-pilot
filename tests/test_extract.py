@@ -68,6 +68,36 @@ def test_bundled_skills_load_and_compile() -> None:
     assert extract_skills("", skills) == []
 
 
+GRADUATE_JD_EXCERPT = """
+•	Software development using languages such as Python, Java, C++, JavaScript or similar technologies.
+•	Data structures, algorithms and problem-solving skills to design scalable and efficient solutions.
+•	Application development across web, mobile, API and enterprise platforms.
+•	Database design, SQL and data management concepts.
+•	Cloud technologies and modern engineering practices, including Azure, containerisation, automation and DevOps principles.
+•	Cybersecurity fundamentals, including secure coding, networking concepts, identity management and threat awareness.
+•	Agile ways of working, software testing, quality engineering and continuous improvement practices.
+"""
+
+
+def test_bundled_skills_on_graduate_jd_excerpt() -> None:
+    # Regression guard: a real JD's bullets, so dictionary edits can't silently drop hits.
+    assert extract_skills(GRADUATE_JD_EXCERPT, load_skills()) == [
+        "Agile",
+        "API",
+        "Azure",
+        "C++",
+        "Containers",
+        "Cybersecurity",
+        "Data Structures & Algorithms",
+        "DevOps",
+        "Java",
+        "JavaScript",
+        "Python",
+        "Software Testing",
+        "SQL",
+    ]
+
+
 def test_load_custom_skills_file(tmp_path: Path) -> None:
     path = tmp_path / "skills.json"
     path.write_text('{"Rust": ["rustlang"]}', encoding="utf-8")

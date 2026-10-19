@@ -10,3 +10,8 @@
 - argparse instead of click/typer: built into Python, so no new dependency; enough for a few subcommands.
 - JSON dictionary instead of YAML: `json` is built in (YAML needs PyYAML); bundled via `importlib.resources` so it loads from any folder.
 - `extract_skills()` returns a list and never prints, instead of printing inside the matcher: unit tests need no output capture, and other commands can reuse it.
+
+## Dictionary: concept skills (2026-10-19)
+- Concept skills (Agile, DevOps, Cybersecurity…) added alongside tools, instead of tools only: graduate JDs name areas more often than tools, and recruiters filter on these terms.
+- A concept matches only on specific phrases ("software testing", "quality engineering"), never a bare generic word like "testing"; Networking excluded because "networking opportunities" would be a false positive.
+- Real-JD excerpt kept as a regression test instead of relying only on synthetic cases: catches dictionary edits that silently drop hits.
