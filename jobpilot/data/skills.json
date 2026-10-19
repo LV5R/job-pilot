@@ -1,0 +1,22 @@
+{
+  "AWS": ["amazon web services"],
+  "Bash": ["shell scripting"],
+  "Burp Suite": ["burp", "burpsuite"],
+  "C#": ["csharp", "c sharp"],
+  "C++": ["cpp"],
+  "CI/CD": ["cicd", "continuous integration", "continuous delivery", "continuous deployment"],
+  "Docker": [],
+  "Git": [],
+  "GitHub Actions": [],
+  "Java": [],
+  "JavaScript": ["js", "ecmascript"],
+  "Kubernetes": ["k8s"],
+  "Linux": [],
+  "Nmap": [],
+  "OWASP": [],
+  "Playwright": [],
+  "PyTest": ["py.test"],
+  "Python": ["python3"],
+  "Selenium": ["webdriver"],
+  "SQL": []
+}

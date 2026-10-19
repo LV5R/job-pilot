@@ -1,0 +1,59 @@
+Job Description - Early Careers Graduate Programme 2027  
+ 	  
+Department: FIL Platforms 
+Location:  	Bengaluru / Gurugram 
+ 
+Who we are: 
+ 
+Do you feel passionate about becoming an investor and making a real difference to our clients’ futures?  
+We’ve been helping clients plan and invest for their futures for over 50 years. From more than 25 locations around the world, we provide investment services and retirement expertise to everyone from central banks to private individuals.  
+We’re known for acting with integrity and thinking for the long-term. And across our organisation, we foster a welcoming, caring and inclusive culture where people feel respected, trusted and able to be themselves.  
+ 
+The Team you will join: 
+ 
+FIL Platforms is the engine that powers Fidelity's global business, bringing together technology, digital, cybersecurity, data and platform capabilities to deliver innovative, scalable and secure solutions for our customers and associates worldwide. Operating across multiple global locations, our teams work together to build and support the platforms, products and services that enable Fidelity's investment, retirement and workplace businesses.  
+ 
+By combining engineering excellence, modern technology practices, AI-enabled innovation and a customer-first mindset, FIL Platforms plays a critical role in driving Fidelity's digital transformation, enhancing client experiences and supporting long-term business growth. As a graduate, you'll join a collaborative global community with opportunities to contribute across software engineering, data, cloud, cybersecurity and technology transformation initiatives while developing the skills needed to shape the future of financial technology. 
+ 
+What you’ll be doing: 
+ 
+Working as part of agile technology teams, you'll contribute to the design, development, testing and deployment of innovative solutions across software engineering, data, cloud, cybersecurity and various technology domains. You'll apply modern engineering practices to solve real business challenges, leverage AI-powered tools to enhance productivity and contribute to the delivery of secure, scalable and customer-focused technology solutions. As your experience grows, you'll collaborate with stakeholders, influence technical decisions and help shape the future of technology at Fidelity. 
+ 
+The difference you’ll make: 
+ 
+As your skills, confidence, and functional expertise grow, you’ll become increasingly involved in key decisions that help our customers achieve their investment and financial planning goals. Through hands-on experience, you’ll build deep knowledge of the industry, products, and customer needs, enabling you to make a meaningful impact. You’ll also provide invaluable support to your team, contributing insights and expertise while continuing to develop your professional capabilities. 
+ 
+How you’ll be supported: 
+ 
+Our Graduate Programme is designed to provide a strong foundation for a successful career in technology through a combination of structured learning, hands-on experience and continuous support. From day one, you'll participate in a 
+comprehensive induction and technology bootcamp that helps you build core capabilities across software engineering, data, cloud, cybersecurity and modern delivery practices, while also developing the professional skills needed to thrive in a collaborative environment. A key focus of the programme is building AI Fluency, equipping graduates with the ability to responsibly leverage AI-powered tools to enhance productivity, accelerate software development, improve analysis and solve real business challenges. As you progress, you'll apply these skills in agile delivery teams, working on live projects that create tangible business value while gaining exposure to a variety of technology disciplines.  
+ 
+Beyond technical development, you'll benefit from ongoing training, leadership interactions, networking opportunities and workshops focused on communication, adaptability and personal effectiveness. Support is embedded throughout the experience, with dedicated managers, mentors and buddies helping you navigate your career journey, while a vibrant early careers community provides opportunities to build lasting professional networks. By the end of the programme, you'll have developed both the technical expertise and AI-enabled ways of working needed to succeed in an increasingly technology-driven world, with access to continued learning and career opportunities across Fidelity. 
+
+We seek graduates who are curious, empathetic, enthusiastic about learning, and willing to dive into new challenges. 
+Creativity and an eye for detail are also crucial. Additionally, as we operate globally, proficiency in English is essential.  
+  
+•	Software development using languages such as Python, Java, C++, JavaScript or similar technologies. 
+•	Data structures, algorithms and problem-solving skills to design scalable and efficient solutions. 
+•	Application development across web, mobile, API and enterprise platforms. 
+•	Database design, SQL and data management concepts. 
+•	Data engineering, analytics and visualisation to generate insights from large and complex datasets. 
+•	Cloud technologies and modern engineering practices, including Azure, containerisation, automation and DevOps principles. 
+•	Cybersecurity fundamentals, including secure coding, networking concepts, identity management and threat awareness. 
+•	Agile ways of working, software testing, quality engineering and continuous improvement practices. 
+•	AI Fluency, including the responsible use of AI-powered tools to enhance productivity, accelerate software development, improve analysis and support innovation. 
+•	Understanding of how AI can be applied across software engineering, data, cloud and cybersecurity disciplines. 
+•	Curiosity to continuously learn emerging technologies and adapt to a rapidly changing technology landscape. 
+ 
+AI Fluency: A Core Capability for Every Technology Graduate. At Fidelity, we believe AI Fluency will be as fundamental to future technology careers as programming and problem-solving skills. We are seeking graduates who can confidently and responsibly apply AI tools to enhance their effectiveness, improve outcomes and accelerate innovation. As an AIfluent graduate, you may: 
+•	Use AI-powered tools to accelerate software development and testing. 
+•	Leverage AI to analyse data, identify patterns and generate insights. 
+•	Improve productivity through automation and intelligent workflows. 
+•	Create effective prompts and critically evaluate AI-generated outputs. 
+•	Apply AI responsibly while considering security, privacy, risk and governance requirements. 
+•	Collaborate with teams to identify practical opportunities for AI-enabled solutions. 
+•	Continuously adapt to emerging technologies and evolving ways of working. 
+ 
+How to Apply 
+ 
+This programme is open to students in the final year of undergraduate programme (Class of 2027). As part of our commitment to inclusion, we are a disability-friendly company. As such, we will welcome a conversation with you if you feel you might benefit from any reasonable adjustments to perform to the best of your ability during the recruitment process and beyond. For any enquiries regarding your application, you can reach us at 
